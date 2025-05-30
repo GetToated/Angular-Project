@@ -16,7 +16,7 @@
         </div>
         <div class="grid grid-cols-4 gap-6">
             @for(product of productsState.state().products; track product) {
-            <app-product-card class="block" [product]="product" />
+            <app-product-card class="block" [product]="product" (addToCart)="addToCart($event)" />
 
         }
         </div> 
